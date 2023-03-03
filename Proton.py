@@ -19,6 +19,7 @@ root.geometry('955x600')
 root.resizable(False, False)
 root.configure(bg='#0A2647')
 
+openai_api='Enter the API key'
 
 photo = PhotoImage(file = "icon.ico")
 root.iconphoto(False, photo)
@@ -156,7 +157,7 @@ def voice():
                     out="Ok, It's my pleasure"
                 else:
             
-                    openai.api_key = "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"
+                    openai.api_key = openai_api
 
                     response = openai.Completion.create(
                       model="text-davinci-003",
@@ -291,7 +292,7 @@ def voice():
                     engine.runAndWait()
                 else:
             
-                    openai.api_key = "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"
+                    openai.api_key = openai_api
 
                     response = openai.Completion.create(
                       model="text-davinci-003",
@@ -460,7 +461,7 @@ def voice():
                 os.remove(filename)
             else:
         
-                openai.api_key = "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"
+                openai.api_key = openai_api
                 response = openai.Completion.create(
                   model="text-davinci-003",
                   prompt=Fin,
@@ -630,7 +631,7 @@ def voice():
                 os.remove(filename)
             else:
         
-                openai.api_key = "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"
+                openai.api_key = openai_api
                 response = openai.Completion.create(
                   model="text-davinci-003",
                   prompt=Fin,
@@ -767,7 +768,7 @@ def click():
       engine.say(out)
       engine.runAndWait()
   else:  
-      openai.api_key = "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"
+      openai.api_key = openai_api
       response = openai.Completion.create(
         model="text-davinci-003",
         prompt=Fin,
