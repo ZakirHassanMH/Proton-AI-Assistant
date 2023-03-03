@@ -19,7 +19,7 @@ root.geometry('955x600')
 root.resizable(False, False)
 root.configure(bg='#0A2647')
 
-openai_api='Enter the API key'
+openai_api=input('Enter the API key: ')
 
 photo = PhotoImage(file = "icon.ico")
 root.iconphoto(False, photo)
